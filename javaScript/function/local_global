@@ -1,0 +1,57 @@
+  A JavaScript variable is simply a name of storage location.
+  There are two types of variables in JavaScript : local variable and global variable.
+  There are some rules while declaring a JavaScript variable (also known as identifiers).
+
+Name must start with a letter (a to z or A to Z), underscore( _ ), or dollar( $ ) sign.
+After first letter we can use digits (0 to 9), for example value1.
+JavaScript variables are case sensitive, for example x and X are different variables.
+
+correct method
+var x = 10;
+var _value="sonoo";
+
+wrong method
+var  123=30;
+var *aa=320;
+
+
+  <!-- LOCAL VARIABLE -->
+
+  <html>
+    <body>
+      <!--
+      <p>LOCAL VARIABLE</p>
+      <script>
+        var x = 10;
+        var y = 20;
+        var z=x+y;
+        document.write(z);
+      </script>
+      -->
+      <p>Gobal VARIABLE</p>
+      <script>
+        var data=200;//gloabal variable
+        function a(){
+          document.writeln(data + "<br>");
+        }
+        function b(){
+          data1 = 50
+          data = 10
+          document.write(data1)
+          document.writeln(data);
+          //writeln() adds a newline character after each statement. write() does not.
+        }
+        a();//calling JavaScript function
+        b();
+</script>
+    </body>
+  </html>
+
+Note
+It makes no sense to use writeln() in HTML.
+
+It is only useful when writing to text documents (type=".txt").
+
+Newline characters are ignored in HTML.
+
+If you want new lines in HTML, you must use paragraphs or <br>:

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript">
+      function myFun(firstname , lastname)
+      {
+        var full;
+        full = firstname + lastname;
+        return full;
+      }
+
+      function myFun1()
+      {
+        var result;
+        result = myFun('gayatri','Bhise');
+        document.write(result);
+      }
+
+    </script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form>
+      <input type="button" onclick="myFun1()" value = "Click">
+
+    </form>
+  </body>
+</html>

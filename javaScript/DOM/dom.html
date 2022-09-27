@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> JavaScript select topmost element</title>
+
+  </head>
+  <body>
+
+    <p id="mark"> This is a paragraph of text</p>
+    <br>
+    <p> other paragraph </p>
+    <p><a href="/html/default.asp">HTML Tutorial</a></p>
+    <p><a href="/css/default.asp">CSS Tutorial</a></p>
+    <p><a href="https://www.w3schools.com">Visit W3Schools</a></p>
+    <p>The number of links in the document is:</p>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      document.write(document.documentElement.getAttribute("lang"));
+      //print lang attribute :- en of html element
+
+      document.write("<br>");
+
+      document.body.style.background = "grey"; //set background colour
+
+      document.write(document.head.firstElementChild.nodeName); // will print tag name of
+        //of the head element first child
+        let numb = document.links.length;
+        document.getElementById("demo").innerHTML = numb;
+        
+          var match = document.getElementById("mark");
+          match.style.background = "blue"
+      </script>
+    <br>
+    <!--<button type="button" onclick="myFunction()">Set background color</button>-->
+  </body>
+</html>

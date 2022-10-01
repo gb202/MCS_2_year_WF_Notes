@@ -1,5 +1,5 @@
 Assignment 1
-end date: 6 oct 2022
+deadline: 6 oct 2022
 
 validate contact form , 
 it should have 3 text field namely 
@@ -7,12 +7,15 @@ it should have 3 text field namely
 and 2 button 
 {send , reset}
 
+
 Assignment 2 
-end date: 10 oct 2022
+deadline: 10 oct 2022
 
 Each student should create their own web sites 
 pages {Home,About, courses,contact}
 integrate this pages on one screen it should not open new window
 navigate it on same screen 
 {use html,css,javascript}
+
+submission :- you have to submit me this assignment by sharing link of your repository 
 

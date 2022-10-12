@@ -1,0 +1,28 @@
+Fundamentals: To use JavaScript on website we need to attach the JavaScript file to the HTML file. 
+To do a better code, we should also do the commenting during the code. There are two types of commenting single-line and multiline.
+
+For a browser to know the code is written in JavaScript and execute it we must enclose the code within the <script> tag to include it on the HTML page.
+<script type="text/javascript"> 
+  // Your js code goes here 
+</script>
+An external JavaScript file can also be written separately and included within our HTML file using the script tag as:
+<script src="filename.js"></script>.
+JavaScript comments can be extremely useful to explain JavaScript code and help understand what’s going on in your code and make it more readable.
+Single-line comments: Start a single-line comment with “//”.
+Multi-line comments: Wrap the comment in /* and*/ if it spans multiple lines.
+
+
+
+Variables: Variables in JavaScript are containers for storing data. JavaScript allows the usage of variables in the following three ways:
+var	->  var is the most commonly used variable in JavaScript. 
+It can be initialized to a value, redeclared and its value can be reassigned, but only inside the context of a function.
+It can be function scoped or globally scoped.	
+var x= value;
+
+let ->	let in JavaScript is similar to var only difference lies in the scope.
+var is function scoped, let is block scoped. It cannot be redeclared but can be reassigned a value.
+let y= value;
+
+const	-> const in JavaScript is used to declare a fixed value that cannot be changed over time once declared. 
+They can neither be redeclared nor be reassigned. They cannot be hoisted either.	
+const z= value;

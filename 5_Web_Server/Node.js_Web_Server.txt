@@ -1,0 +1,29 @@
+we will learn how to create a simple Node.js web server and handle HTTP requests.
+
+To access web pages of any web application, you need a web server. The web server will handle all the http requests for the web application
+e.g IIS is a web server for ASP.NET web applications and Apache is a web server for PHP or Java web applications.
+
+Node.js provides capabilities to create your own web server which will handle HTTP requests asynchronously. 
+You can use IIS or Apache to run Node.js web application but it is recommended to use Node.js web server.
+
+Create Node.js Web Server
+Node.js makes it easy to create a simple web server that processes incoming requests asynchronously.
+
+The following example is a simple Node.js web server contained in server.js file.
+var http = require('http'); // 1 - Import Node.js core module
+
+var server = http.createServer(function (req, res) {   // 2 - creating server
+
+    //handle incomming requests here..
+
+});
+
+server.listen(5000); //3 - listen for any incoming requests
+
+console.log('Node.js web server at port 5000 is running..')
+
+In the above example, we import the http module using require() function. 
+The http module is a core module of Node.js, so no need to install it using NPM. 
+The next step is to call createServer() method of http and specify callback function with request and response parameter. 
+Finally, call listen() method of server object which was returned from createServer() method with port number,
+to start listening to incoming requests on port 5000. You can specify any unused port here.

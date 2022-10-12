@@ -1,0 +1,67 @@
+Modules are of three types:
+    • Core Modules
+    • local Modules
+    • Third-party Modules
+Core Modules: Node.js has many built-in modules that are part of the platform and comes with Node.js installation. These modules can be loaded into the program by using the require function. 
+Syntax: var module = require('module_name');
+The require() function will return a JavaScript type depending on what the particular module returns. The following example demonstrates how to use the Node.js Http module to create a web server. 
+
+var http = require('http');
+http.createServer(function (req, res) {
+res.writeHead(200, {'Content-Type': 'text/html'});
+res.write('Welcome to this page!');
+res.end();
+}).listen(3000);
+In the above example, the require() function returns an object because the Http module returns its functionality as an object. The function http.createServer() method will be executed when someone tries to access the computer on port 3000. The res.writeHead() method is the status code where 200 means it is OK, while the second argument is an object containing the response headers. 
+
+
+Core Modules  ->   Description
+http   ->  creates an HTTP server in Node.js.
+assert -> set of assertion functions useful for testing.
+fs  -> used to handle file system.
+path  -> includes methods to deal with file paths.
+process -> provides information and control about the current Node.js process.
+os  -> provides information about the operating system.
+querystring -> utility used for parsing and formatting URL query strings.
+url -> module provides utilities for URL resolution and parsing.
+
+
+Local Modules: Unlike built-in and external modules, local modules are created locally in your Node.js application. Let’s create a simple calculating module that calculates various operations. Create a calc.js file that has the following code: 
+
+exports.add = function (x, y) {
+	return x + y;
+};
+	
+exports.sub = function (x, y) {
+	return x - y;
+};
+	
+exports.mult = function (x, y) {
+	return x * y;
+};
+	
+exports.div = function (x, y) {
+	return x / y;
+};
+
+Since this file provides attributes to the outer world via exports, another file can use its exported functionality using the require() function. 
+
+var calculator = require('./calc');
+	
+var x = 50, y = 10;
+	
+console.log("Addition of 50 and 10 is "	+ calculator.add(x, y));
+	
+console.log("Subtraction of 50 and 10 is "+ calculator.sub(x, y));
+	
+console.log("Multiplication of 50 and 10 is "+ calculator.mult(x, y));
+	
+console.log("Division of 50 and 10 is "+ calculator.div(x, y));
+
+
+Third-party modules: Third-party modules are modules that are available online using the Node Package Manager(NPM). These modules can be installed in the project folder or globally. Some of the popular third-party modules are mongoose, express, angular, and react.
+Example:
+    • npm install express
+    • npm install mongoose
+    • npm install -g @angular/cli
+

@@ -1,0 +1,20 @@
+
+So What’s Happening Here?
+When this code is executed, a global execution context is created 
+(represented by main()) and pushed to the top of the call stack.
+ When a call to first() is encountered, it’s pushed to the top of the stack.
+
+Next, console.log('Hi there!') is pushed to the top of the stack,
+ when it finishes, it’s popped off from the stack. After it,
+  we call second(), so the second() function is pushed to the top of the stack.
+
+console.log('Hello there!') is pushed to the top of the stack 
+and popped off the stack when it finishes. The second() function 
+finishes, so it’s popped off the stack.
+
+console.log(‘The End’) is pushed to the top of the stack and 
+removed when it finishes. After it, the first() function completes,
+ so it’s removed from the stack.
+
+The program completes its execution at this point, so the 
+global execution context(main()) is popped off from the stack.

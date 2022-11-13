@@ -1,0 +1,61 @@
+
+JavaScript is a single-threaded programming language which means only one 
+thing can happen at a time. That is, the JavaScript engine can only process
+ one statement at a time in a single thread.
+
+While the single-threaded languages simplify writing code because 
+you don’t have to worry about the concurrency issues, this also means 
+you can’t perform long operations such as network access without blocking the main thread.
+
+Imagine requesting some data from an API. Depending upon the situation
+ the server might take some time to process the request while blocking 
+ the main thread making the web page unresponsive.
+
+That’s where asynchronous JavaScript comes into play.
+ Using asynchronous JavaScript (such as callbacks, promises, and async/await),
+  you can perform long network requests without blocking the main thread.
+
+
+******************************************
+
+How Does Synchronous JavaScript Work?
+
+***********************************************
+
+let’s first understand how the synchronous 
+JavaScript code executes inside the JavaScript engine. For example:
+
+main()
+{
+  first();
+      const second = () => {
+    console.log('Hello there!');
+      }
+      const first = () => {
+      console.log('Hi there!');
+      second();
+      console.log('The End');
+      }
+first();
+se();
+}
+
+
+Execution Context
+An Execution Context is an abstract concept of an environment 
+where the JavaScript code is evaluated and executed. 
+Whenever any code is run in JavaScript, it’s run inside an execution context.
+
+The function code executes inside the function execution context,
+ and the global code executes inside the global execution context.
+  Each function has its own execution context.
+
+Call Stack
+The call stack as its name implies is a stack with a 
+LIFO (Last in, First out) structure, which is used to store all
+ the execution context created during the code execution.
+
+JavaScript has a single call stack because it’s a 
+single-threaded programming language. 
+The call stack has a LIFO structure which means that the items 
+can be added or removed from the top of the stack only.

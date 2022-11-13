@@ -1,0 +1,16 @@
+What Is MongoDB?
+MongoDB is a database that stores your data as documents. Most commonly these documents resemble a JSON-like structure:
+
+{
+  firstName: "Jamie",
+  lastName: "Munro"
+}
+A document then is placed within a collection. As an example, the above document example defines a user object. 
+This user object then would typically be part of a collection called users.
+
+One of the key factors with MongoDB is its flexibility when it comes to structure. Even though in the first example, 
+the user object contained a firstName and lastName property, these properties are not required in every user document that is part of the users collection. 
+This is what makes MongoDB very different from a SQL database like MySQL or Microsoft SQL Server 
+that requires a strongly-defined database schema of each object it stores.
+
+The ability to create dynamic objects that are stored as documents in the database is where Mongoose comes into play.
